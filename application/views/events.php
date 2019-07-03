@@ -39,7 +39,7 @@
 	<header class="s-header">
 	<div class="header__top">
 		<div class="header__logo">
-			<a class="site-logo" href="index.html"><h3 style="color: white">XPRESO</h3></a>
+			<a class="site-logo" href="<?= base_url();?>"><h3 style="color: white">XPRESO</h3></a>
 		</div>
 		<div class="header__search">
 			<form role="search" method="get" class="header__search-form" action="#">
@@ -79,7 +79,8 @@
             <a href="sponsor">Sponsor & Media Partner</a>
         </li>
 	</ul>
-	<!-- end header__nav -->
+  <!-- end header__nav -->
+  
 	<ul class="header__social">
 		<li class="ss-instagram">
 			<a href="https://instagram.com/official.xpreso/"><span class="screen-reader-text">Instagram</span></a>

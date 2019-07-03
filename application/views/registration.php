@@ -3,21 +3,22 @@
 <head>
 <!--- basic page needs
     ================================================== -->
-<meta charset="utf-8">
+	<meta charset="UTF-8">
 <title>XPRESO</title>
 <meta name="description" content="">
 <meta name="author" content="">
 <!-- mobile specific metas
     ================================================== -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 <!-- CSS
     ================================================== -->
-<!-- <link rel="stylesheet" href="<?= base_url('assets/css/base.css');?>">
-<link rel="stylesheet" href="<?= base_url('assets/css/vendor.css');?>">
-<link rel="stylesheet" href="<?= base_url('assets/css/main.css');?>"> -->
+	<link rel="stylesheet" href="<?= base_url('assets/css/base.css');  ?>">
+<link rel="stylesheet" href="<?= base_url('assets/css/vendor.css');  ?>">
+<link rel="stylesheet" href="<?= base_url('assets/css/main.css');  ?>">
 <!-- script
     ================================================== -->
-<script src="js/modernizr.js"></script>
+<script src="<?= base_url('assets/js/modernizr.js');  ?>"></script>
 <script src="https://kit.fontawesome.com/78cf3c7533.js"></script>
 <!-- favicons
     ================================================== -->
@@ -38,7 +39,7 @@
 	<header class="s-header">
 	<div class="header__top">
 		<div class="header__logo">
-			<a class="site-logo" href="index.html"><h3 style="color: white">XPRESO</h3></a>
+			<a class="site-logo" href="<?= base_url();?>"><h3 style="color: white">XPRESO</h3></a>
 		</div>
 		<div class="header__search">
 			<form role="search" method="get" class="header__search-form" action="#">
@@ -66,7 +67,7 @@
 			<a href="events" title="">Events</a>
 		</li>
 		<li>
-			<a href="styles" title="">Information</a>
+			<a href="information" title="">Information</a>
         </li>
         <li class="current">
             <a href="registration">Registration</a>
@@ -98,38 +99,38 @@
 	<!-- end s-header -->
 	<div class="s-content">
 <h3> ALUR DAN PERSYARATAN PENDAFTARAN </h3>
-
-<!-- 1.	Peserta merupakan siswa/i SMP/MTs sederajat atau SMA/SMK/MA sederajat sewilayah Jawa Barat kecuali untuk peserta E-Sports karena terdapa peserta Umum.
-2.	Alur pendaftaran sebagai berikut :
-a.	Mendaftarkan diri melalui website XPRESO 12 atau menyerahkan formulir pendaftaran beserta berkas persyaratan kepada panitia yang berada di Kampus SMA Pesantren Terpadu Hayatan Thayyibah, Jl. Karamat No. 123.
-b.	Berkas persyaratan pendaftaran sebagai berikut :
-1.	Surat rekomendasi dari sekolah (disertai tanda tangan kepala sekolah dan stempel sekolah asli).
-2.	Fotokopi kartu pelajar/KTP
-3.	Pas foto 3x4 sebanyak tiga buah (dibagian belakang foto dicantumkan nama lengkap dan asal sekolah).
-4.	Formulir pendaftaran
-c.	Poin b.1 tidak berlaku bagi peserta Umum (E-Sport)
-d.	Semua berkas persyaratan dimasukan kedalam amplop coklat.
-e.	Apabila berkas persyaratan sudah lengkap, calon peserta mentransfer uang registrasi selambat-lambatnya 3 hari setelah dikonfirmasi kelengkapannya oleh panitia.
-f.	Biaya pendaftaran dapat dikirim ke rekening berikut :
-
-g.	Mengirim bukti pemabayaran melalui Whatsapp ...
-h.	Setelah pembayaran dikonfirmasi oleh panitia maka calon peserta dinyatakan sebagai peserta. -->
+	<ol>
+		<li>Peserta merupakan siswa/i SMP/MTs sederajat atau SMA/SMK/MA sederajat sewilayah Jawa Barat kecuali untuk peserta E-Sports karena terdapa peserta Umum.</li>
+		<li>Alur pendaftaran sebagai berikut :
+			<ol style="list-style-type: lower-alpha">
+				<li>Mendaftarkan diri melalui website XPRESO 12 atau menyerahkan formulir pendaftaran beserta berkas persyaratan kepada panitia yang berada di Kampus SMA Pesantren Terpadu Hayatan Thayyibah, Jl. Karamat No. 123.</li>
+				<li>Berkas persyaratan pendaftaran sebagai berikut :
+					<ol>
+						<li>Surat rekomendasi dari sekolah (disertai tanda tangan kepala sekolah dan stempel sekolah asli).</li>
+						<li>Fotokopi kartu pelajar/KTP</li>
+						<li>Pas foto 3x4 sebanyak tiga buah (dibagian belakang foto dicantumkan nama lengkap dan asal sekolah).</li>
+						<li>Formulir pendaftaran</li>
+					</ol>
+				</li>
+				<li>Poin b.1 tidak berlaku bagi peserta Umum (E-Sport)</li>
+				<li>Semua berkas persyaratan dimasukan kedalam amplop coklat.</li>
+				<li>Apabila berkas persyaratan sudah lengkap, calon peserta mentransfer uang registrasi selambat-lambatnya 3 hari setelah dikonfirmasi kelengkapannya oleh panitia.</li>
+				<li>Biaya pendaftaran dapat dikirim ke rekening berikut :</li>
+				<li>Mengirim bukti pemabayaran melalui Whatsapp ...</li>
+				<li>Setelah pembayaran dikonfirmasi oleh panitia maka calon peserta dinyatakan sebagai peserta.</li>
+			</ol>
+		</li>
+	</ol>
 
 <h3>KETENTUAN PENDAFTARAN </h3>
 		<ol>
-			<li>Pendaftaran dibukan pada bulan Agustus hingga satu hari sebelum Technical Meeting. </li>
-			<ul>
-				<li>tfhgfh</li>
-				<ul>
-					<li>asdsa</li>
-				</ul>
-			</ul>
+			<li>Pendaftaran dibukan pada bulan Agustus hingga satu hari sebelum <i>Technical Meeting</i>. </li>
 			<li>Kuota maksimal peserta tercantum pada “Petunjuk Teknis dan Pelaksaan Perlombaan”. </li>
-			<li>Apabila kuota maksimal sudah terpenuhi, peserta yang baru mendaftar akan dimasukan kedalam waiting list dan diharapkan menunggu konfirmasi dari panitia perlombaan terkait. </li>
-			<li>Konfirmasi terakhir terhadap kuota peserta adalah pada hari Technical Meeting, dengan demikian bagi peserta yang ingin mengundurkan diri selambat-lambatnya pada saat Technical Meeting. </li>
+			<li>Apabila kuota maksimal sudah terpenuhi, peserta yang baru mendaftar akan dimasukan kedalam <i>waiting list</i> dan diharapkan menunggu konfirmasi dari panitia perlombaan terkait. </li>
+			<li>Konfirmasi terakhir terhadap kuota peserta adalah pada hari <i>Technical Meeting</i>, dengan demikian bagi peserta yang ingin mengundurkan diri selambat-lambatnya pada saat <i>Technical Meeting</i>. </li>
 			<li>Uang pendaftaran tidak dapat dikembalikan apabila sekolah yang bersangkutan ingin mengundurkan diri. </li>
 		</ol>
-
+<h3>BIAYA PENDAFTARAN</h3>
 	</div>
 	<!-- end s-content -->
 	<!-- footer

@@ -78,7 +78,7 @@
                 <a href="events" title="">Events</a>
             </li>
             <li>
-                <a href="styles" title="">Information</a>
+                <a href="information" title="">Information</a>
             </li>
             <li>
                 <a href="registration">Registration</a>

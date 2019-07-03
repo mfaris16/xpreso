@@ -50,7 +50,7 @@
         <header class="s-header">
         <div class="header__top">
             <div class="header__logo">
-                <a class="site-logo" href="index.html"><h3 style="color: white">XPRESO</h3></a>
+                <a class="site-logo" href="<?= base_url();?>"><h3 style="color: white">XPRESO</h3></a>
             </div>
             <div class="header__search">
                 <form role="search" method="get" class="header__search-form" action="#">
@@ -78,10 +78,10 @@
                 <a href="events" title="">Events</a>
             </li>
             <li>
-                <a href="styles" title="">Information</a>
+                <a href="information" title="">Information</a>
             </li>
             <li>
-                <a href="register">Registration</a>
+                <a href="registration">Registration</a>
             </li>
             <li>
                 <a href="schedule">Schedule</a>
