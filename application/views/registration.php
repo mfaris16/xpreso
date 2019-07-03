@@ -130,32 +130,6 @@ h.	Setelah pembayaran dikonfirmasi oleh panitia maka calon peserta dinyatakan se
 			<li>Uang pendaftaran tidak dapat dikembalikan apabila sekolah yang bersangkutan ingin mengundurkan diri. </li>
 		</ol>
 
-	<table border="1">
-		<tr>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-			<td>4</td>
-		</tr>
-		<tr>
-			<td>5</td>
-			<td colspan="2" rowspan="2">6</td>
-			
-			<td>8</td>
-		</tr>
-		<tr>
-			<td>9</td>
-			<td>10</td>
-		
-		</tr>
-		<tr>
-			<td>13</td>
-			<td>14</td>
-			<td>15</td>
-			<td>16</td>
-		</tr>
-	</table>
-
 	</div>
 	<!-- end s-content -->
 	<!-- footer
