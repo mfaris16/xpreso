@@ -106,10 +106,10 @@
                         <fieldset>
     
                             <div class="form-field">
-                                <input name="email" id="email" class="full-width" placeholder="Alamat Email" value="" type="email">
+                                <input name="email" id="email" class="full-width" placeholder="Alamat Email" value="<?= set_value('email');?>" type="email">
                             </div>
                             <div class="form-field">
-                                <input name="name" id="name" class="full-width" placeholder="Password" value="" type="password">
+                                <input name="password" id="password" class="full-width" placeholder="Password" value="" type="password">
                             </div>
     
                             <input name="login" id="login" class="btn btn--primary btn-wide btn--large full-width" value="Login" type="submit">

@@ -171,7 +171,8 @@
                             </div>
     
                             <div class="form-field">
-								<input name="cGender" id="cGenderL" value="pria" type="radio"> <label  for="cGenderL">Pria</label>
+								<label>Jenis Kelamin:</label><br>
+								<input name="cGender" id="cGenderL" value="pria" type="radio"> <label  for="cGenderL">Pria</label><br>
 								<input name="cGender" id="cGenderP" value="wanita" type="radio"> <label for="cGenderP">Wanita</label>
 							</div>
 							
