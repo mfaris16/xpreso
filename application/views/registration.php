@@ -202,6 +202,18 @@
 									<?php endforeach;?>
 								</select>
 							</div>
+							<div class="form-field">
+                                <input name="cAsal" id="cAsal" class="full-width" placeholder="Asal Sekolah" value="" type="text">
+                            </div>
+							<div class="form-field">
+                                <input name="cNoSekolah" id="cNoSekolah" class="full-width" placeholder="No Telpon Sekolah" value="" type="text">
+                            </div>
+							<div class="form-field">
+                                <input name="cNamaPembina" id="cNamaPembina" class="full-width" placeholder="Nama Pembina" value="" type="text">
+                            </div>
+							<div class="form-field">
+                                <input name="cNoPembina" id="cNoPembina" class="full-width" placeholder="No HP Pembina" value="" type="text">
+                            </div>
     
                             <input name="submit" id="submit" class="btn btn--primary btn-wide btn--large full-width" value="Submit" type="submit">
     

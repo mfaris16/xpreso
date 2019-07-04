@@ -70,7 +70,7 @@
 		<li>
 			<a href="information" title="">Information</a>
         </li>
-        <li class="current">
+        <li>
             <a href="registration">Registration</a>
         </li>
         <li>
