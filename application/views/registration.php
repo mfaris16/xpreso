@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="<?= base_url('assets/css/base.css');  ?>">
 <link rel="stylesheet" href="<?= base_url('assets/css/vendor.css');  ?>">
 <link rel="stylesheet" href="<?= base_url('assets/css/main.css');  ?>">
+<link rel="stylesheet" href="<?= base_url('assets/css/style.css');?>">	
 <!-- script
     ================================================== -->
 <script src="<?= base_url('assets/js/modernizr.js');  ?>"></script>
@@ -59,7 +60,7 @@
 	<ul class="header__nav">
 		<li>
 			<a href="welcome" title="">Home</a>
-        </li>
+		</li>
         <li>
 			<a href="about" title="">About Us</a>
 		</li>
@@ -131,11 +132,78 @@
 			<li>Uang pendaftaran tidak dapat dikembalikan apabila sekolah yang bersangkutan ingin mengundurkan diri. </li>
 		</ol>
 <h3>BIAYA PENDAFTARAN</h3>
+
+<a href="#registrasi"><h5>CLICK HERE FOR REGISTRATION</h5></a>
+<!-- Buat modal kita simpen disini ya-->
+
+	<h4>INFORMATION</h4>
+	<ol>
+		<li>Mohon untuk membaca ALUR DAN PERSYARATAN PENDAFTARAN dan KETENTUAN PENDAFTARAN agar tidak terjadi kesalah pahaman.</li>
+		<li>Untuk mata lomba SILAT tidak ada pendaftaraan online</li>
+		<li>Mata lomba yang pesertanya berkelompok cukup daftarkan ketuanya saja. Untuk data para anggotanya bisa dikirim melalui e-mail officialxpreso@gmail.com, dengan format  : <br>
+		<!-- ini blom WARNING -->
+		Subjek	: ANGGOTA (MATA LOMBA) (NAMA KETUA) (ASAL SEKOLAH/NAMA TIM KHUSUS E-Sport UMUM) <br>
+		Isi		:
+		<ul>
+			<li>Nama Anggota :</li>
+			<li>Jenis Kelamin :</li>
+			<li>Tanggal Lahir :</li>
+			<li>Alamat :</li>
+			<li>Nomor HP :</li>
+		</ul>
+		</li>
+		<li>Berkas persyaratan pendaftaran dapat dikirim ke kampus SMA Pesantren Terpadu Hayatan Thayyibah di Jalan Karamat No. 123 Sukabumi 43122 Jawa Barat.</li>
+		<li>Apabila berkas persyaratan akan dikirim melalui kurir, cantumkan asal sekolah dan nama ketua pada amplop coklat.</li>
+		<li>Untuk E-Sport UMUM, segala yang berkaitan dengan instansi pendidikan tidak usah diisi dan dilengkapi.</li>
+	</ol>
+
+	<h3 class="h2">Mohon Isi Data Dibawah Ini</h3>
+        
+                    <form name="contactForm" id="contactForm" method="post" action="" autocomplete="off">
+                        <fieldset>
+    
+                            <div class="form-field">
+                                <input name="cName" id="cName" class="full-width" placeholder="Nama Lengkap" value="" type="text">
+                            </div>
+    
+                            <div class="form-field">
+                                <input name="cEmail" id="cEmail" class="full-width" placeholder="Alamat Email" value="" type="email">
+                            </div>
+    
+                            <div class="form-field">
+								<input name="cGender" id="cGenderL" value="pria" type="radio"> <label  for="cGenderL">Pria</label>
+								<input name="cGender" id="cGenderP" value="wanita" type="radio"> <label for="cGenderP">Wanita</label>
+							</div>
+							
+							<div class="form-field">
+								<label for="cDateBirth">Tanggal Lahir : </label><br><input name="cDateBirth" id="cDateBirth" type="date">
+							</div>
+    
+                            <div class="message form-field">
+                                <textarea name="cAdress" id="cAddress" class="full-width" placeholder="Alamat Lengkap"></textarea>
+							</div>
+							
+							<div class="form-field">
+								<input type="text" name="cPhone" class="full-width" id="cPhone" placeholder="No Telpon">
+							</div>
+
+							<div class="form-field">
+								<select name="cLomba" id="cLomba" class="full-width ss-custom-select">
+									<option value=""></option>
+								</select>
+							</div>
+    
+                            <input name="submit" id="submit" class="btn btn--primary btn-wide btn--large full-width" value="Submit" type="submit">
+    
+                        </fieldset>
+                    </form> <!-- end form -->
+<!-- /Modal -->
 	</div>
 	<!-- end s-content -->
 	<!-- footer
         ================================================== -->
 </div>
+
 <!-- end s-wrap -->
 <!-- Java Script
     ================================================== -->

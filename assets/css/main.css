@@ -779,6 +779,9 @@ select {
   vertical-align: middle;
 }
 
+
+
+
 .ss-custom-select select option {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -832,7 +835,7 @@ legend {
   margin-bottom: 0.8rem;
   line-height: 1.714;
   color: #000000;
-  display: block;
+  display: inline-block;
 }
 
 input[type="checkbox"],
