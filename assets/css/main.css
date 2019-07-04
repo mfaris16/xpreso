@@ -811,7 +811,7 @@ select {
 }
 
 textarea {
-  min-height: 25.6rem;
+  min-height: 11rem;
 }
 
 input[type="email"]:focus,

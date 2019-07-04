@@ -188,8 +188,18 @@
 							</div>
 
 							<div class="form-field">
-								<select name="cLomba" id="cLomba" class="full-width ss-custom-select">
-									<option value=""></option>
+								<select name="cLomba" id="cLomba" class="full-width">
+									<?php foreach($lomba as $l) :?>
+									<option value="<?= $l?>"><?= $l?></option>
+									<?php endforeach;?>
+								</select>
+							</div>
+
+							<div class="form-field">
+								<select name="cLagu" id="cLagu" class="full-width">
+								<?php foreach($laguL as $lL) :?>
+									<option value="<?= $lL?>"><?= $lL?></option>
+									<?php endforeach;?>
 								</select>
 							</div>
     
