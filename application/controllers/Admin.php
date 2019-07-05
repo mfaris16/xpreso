@@ -5,6 +5,7 @@ class Admin extends CI_Controller{
     {
         parent::__construct();
         $this->load->library('form_validation');
+        $this->load->model('M_admin');
     }
     public function index()
     {
@@ -33,9 +34,11 @@ class Admin extends CI_Controller{
 }
     public function page()
     {
+
+        $data['datas'] = $this->M_admin->data();
         if($this->session->userdata('masuk')==true){
             
-            $this->load->view('admin-page');
+            $this->load->view('admin-page',$data);
         }else{
             redirect('admin');
         }

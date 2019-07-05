@@ -50,6 +50,7 @@ class Registration extends CI_Controller{
 			redirect(base_url(),'refresh');
 		}
 
+
 	}
 }
 

@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-<!--- basic page needs
+
+    <!--- basic page needs
     ================================================== -->
-<meta charset="utf-8">
-<title>XPRESO</title>
-<meta name="description" content="">
-<meta name="author" content="">
-<!-- mobile specific metas
+    <meta charset="utf-8">
+    <title>About - Typerite</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
     ================================================== -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- CSS
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
     ================================================== -->
-<link rel="stylesheet" href="<?= base_url('assets/css/base.css');  ?>">
-<link rel="stylesheet" href="<?= base_url('assets/css/vendor.css');  ?>">
-<link rel="stylesheet" href="<?= base_url('assets/css/main.css');  ?>">
-<!-- script
+    <link rel="stylesheet" href="<?= base_url('assets/css/base.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/vendor.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/main.css')?>">
+
+    <!-- script
     ================================================== -->
-<script src="<?= base_url('assets/js/modernizr.js');  ?>"></script>
-<script src="https://kit.fontawesome.com/78cf3c7533.js"></script>
-<!-- favicons
+    <script src="js/modernizr.js"></script>
+
+    <!-- favicons
     ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
 </head>
 <body>
 <!-- preloader
@@ -100,7 +109,45 @@
 	<?= 'hai '.$this->session->userdata('username');
 	echo '<br>'.anchor('admin/keluar','keluar');
 	?>
-	
+	<table>
+		<tr>
+			<td>No.</td>
+			<td>Nama Lengkap</td>
+			<td>Email</td>
+			<td>Jenis Kelamin</td>
+			<td>Tanggal Lahir</td>
+			<td>Alamat</td>
+			<td>No Hp</td>
+			<td>Lomba</td>
+			<td>Lagu Pilihan (Solo Vocal)</td>
+			<td>Asal Sekolah</td>
+			<td>No Telp. Sekolah</td>
+			<td>Nama Pembina</td>
+			<td>No Pembina</td>
+			<td>Tanggal Daftar</td>
+		</tr>
+		<?php
+		$no = 1;
+			foreach($datas as $d) :
+		?>
+		<tr>
+			<td><?= $no++;?></td>
+			<td><?= $d['nama'];?></td>
+			<td><?= $d['email'];?></td>
+			<td><?= $d['jenis_kelamin'];?></td>
+			<td><?= $d['tgl_lahir'];?></td>
+			<td><?= $d['alamat'];?></td>
+			<td><?= $d['nohp'];?></td>
+			<td><?= $d['mata_lomba'];?></td>
+			<td><?= $d['lagu'];?></td>
+			<td><?= $d['asal_sekolah'];?></td>
+			<td><?= $d['no_sekolah'];?></td>
+			<td><?= $d['nama_pembina'];?></td>
+			<td><?= $d['no_pembina'];?></td>
+			<td><?= $d['tgl_dibuat'];?></td>
+		</tr>
+			<?php endforeach;?>
+	</table>
 	</div>
 	<!-- end s-content -->
 	<!-- footer

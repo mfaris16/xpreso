@@ -35,7 +35,6 @@ class M_reg extends CI_Model {
         ];
         $this->db->insert('registration',$data);
     }
-    
 
 }
 
