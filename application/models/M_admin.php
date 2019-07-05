@@ -9,6 +9,18 @@ class M_admin extends CI_Model {
     {
         return $this->db->get('registration')->result_array();
     }
+    public function insert()
+    {
+
+    }
+    public function update()
+    {
+
+    }
+    public function delete()
+    {
+        
+    } 
 
 }
 
