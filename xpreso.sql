@@ -40,7 +40,7 @@ CREATE TABLE `registration` (
   `no_sekolah` varchar(20) NOT NULL,
   `nama_pembina` varchar(128) NOT NULL,
   `no_pembina` varchar(20) NOT NULL,
-  `tgl_dibuat` date NOT NULL
+  `tgl_dibuat` varchar(255)) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
