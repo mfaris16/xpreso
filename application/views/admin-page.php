@@ -56,7 +56,7 @@
 	<!-- end header__top -->
 	<nav class="header__nav-wrap">
 	<ul class="header__nav">
-		<li class="current">
+		<li>
 			<a href="welcome" title="">Home</a>
         </li>
         <li>
@@ -96,11 +96,11 @@
 	</nav>
 	<!-- end header__nav-wrap --></header>
 	<!-- end s-header -->
-	<div class="s-content text-center">
-        <h1>XPRESO</h1>
-        <p>Xpresi Edukasi, Seni, dan Olahraga</p>
-        <img src="<?= base_url('assets/images/Logo XPRESO12.png');?>" width="50%" alt="">
-        <p>“ILLOGICAL THOUGHTS : REVIVE INANIMATE WORLD”</p>
+	<div class="s-content">
+	<?= 'hai '.$this->session->userdata('username');
+	echo '<br>'.anchor('admin/keluar','keluar');
+	?>
+	
 	</div>
 	<!-- end s-content -->
 	<!-- footer

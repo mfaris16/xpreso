@@ -4,7 +4,6 @@ class Admin extends CI_Controller{
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('m_admin');
         $this->load->library('form_validation');
     }
     public function index()
@@ -12,14 +11,38 @@ class Admin extends CI_Controller{
         $this->form_validation->set_rules('email','Email','trim|required|valid_email');
         $this->form_validation->set_rules('password','Password','trim|required');
         if ($this->form_validation->run()==true) {
-        $this->m_admin->login();
-        redirect(base_url());
+            $email = $this->input->post('email');
+            $password = $this->input->post('password');
+    
+            $user = $this->db->get_where('users',['email'=>$email,'password'=>sha1($password)]);
+        if($user->num_rows() > 0){
+            $data = $user->row_array();
+            $data_session=[
+                'username' => $data['username'],
+                'masuk' => true,
+                'akses' => $data['role_id']
+            ];
+            $this->session->set_userdata($data_session);
+            redirect('admin/page');
+        }else{
+            redirect('');
+        }
     }else{
         $this->load->view('login-page');
     }
 }
     public function page()
     {
-        $this->load->view('admin');
+        if($this->session->userdata('masuk')==true){
+            
+            $this->load->view('admin-page');
+        }else{
+            redirect('admin');
+        }
+    }
+    public function keluar()
+    {
+        $this->session->sess_destroy();
+        redirect('admin');
     }
 }
