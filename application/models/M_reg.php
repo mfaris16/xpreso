@@ -31,7 +31,7 @@ class M_reg extends CI_Model {
             'no_sekolah' => $noHpSekolah,
             'nama_pembina' => $namaPembina,
             'no_pembina' => $noHpPembina,
-            'tgl_dibuat' => date('d-m-Y')
+            'tgl_dibuat' => date('m-d-Y')
         ];
         $this->db->insert('registration',$data);
     }

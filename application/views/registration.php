@@ -198,6 +198,7 @@
 
 							<div class="form-field">
 								<select name="cLagu" id="cLagu" class="full-width">
+									<option value="-">--Pilih Lagu--</option>
 								<?php foreach($laguL as $lL) :?>
 									<option value="<?= $lL?>"><?= $lL?></option>
 									<?php endforeach;?>

@@ -35,13 +35,13 @@ class Registration extends CI_Controller{
 		$this->form_validation->set_rules('cGender','Jenis Kelamin','trim|required');
 		$this->form_validation->set_rules('cDateBirth','Tanggal Lahir','trim|required');
 		$this->form_validation->set_rules('cAdress','Alamat','trim|required');
-		$this->form_validation->set_rules('cPhone','No Telpon','trim|required');
+		$this->form_validation->set_rules('cPhone','No Telpon','trim|required|numeric');
 		$this->form_validation->set_rules('cLomba','Mata lomba','trim|required');
 		$this->form_validation->set_rules('cLagu','Lagu Pilihan','trim');
 		$this->form_validation->set_rules('cAsal','Asal Sekolah','trim|required');
-		$this->form_validation->set_rules('cNoSekolah','No Telp. Sekolah','trim|required');
+		$this->form_validation->set_rules('cNoSekolah','No Telp. Sekolah','trim|required|numeric');
 		$this->form_validation->set_rules('cNamaPembina','Nama Pembina','trim|required');
-		$this->form_validation->set_rules('cNoPembina','No Telp. Pembina','trim|required');
+		$this->form_validation->set_rules('cNoPembina','No Telp. Pembina','trim|required|numeric');
 
 		if($this->form_validation->run()==false){
 		$this->load->view('registration',$data);

@@ -125,6 +125,7 @@
 			<td>Nama Pembina</td>
 			<td>No Pembina</td>
 			<td>Tanggal Daftar</td>
+			<td><?= anchor('admin/tambah', 'Tambah Data'); ?></td>
 		</tr>
 		<?php
 		$no = 1;
@@ -145,6 +146,10 @@
 			<td><?= $d['nama_pembina'];?></td>
 			<td><?= $d['no_pembina'];?></td>
 			<td><?= $d['tgl_dibuat'];?></td>
+			<td>
+				<a href="<?= base_url('admin/hapus/'.$d['id'])?>">hapus</a>
+				<a href="<?= base_url('admin/edit/'.$d['id'])?>">edit</a>
+			</td>
 		</tr>
 			<?php endforeach;?>
 	</table>
