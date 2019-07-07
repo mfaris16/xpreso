@@ -27,8 +27,4 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('page-about');
 	}
-	public function swal()
-	{
-		$this->load->view('swal');
-	}
 }
