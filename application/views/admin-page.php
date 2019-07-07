@@ -160,7 +160,8 @@
 </div>
 <!-- end s-wrap -->
 <!-- Java Script
-    ================================================== -->\
+    ================================================== -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="<?= base_url('assets/js/jquery-3.2.1.min.js');?>"></script>
 <script src="<?= base_url('assets/js/plugins.js');?>"></script>
 <script src="<?= base_url('assets/js/main.js');?>"></script>

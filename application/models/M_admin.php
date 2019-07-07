@@ -11,7 +11,7 @@ class M_admin extends CI_Model {
     }
     public function getById($id)
     {
-        return $this->db->get_where('registration', ["id" => $id])->row_array();
+        return $this->db->get_where('registration', ['id' => $id])->row_array();
     }
     public function insert()
     {

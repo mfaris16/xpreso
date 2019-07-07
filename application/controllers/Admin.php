@@ -71,7 +71,10 @@ class Admin extends CI_Controller{
 		];
 		$data['laguL'] = [
 			'Photograph', 'Arti Sahabat', 'Gajah'	
-        ];
+		];
+		$data['laguP'] = [
+			'Kejar Mimpi', 'Nyawa Dan Harapan', 'Hijrah Cinta', 'Fight Song'
+		];
 		$this->form_validation->set_rules('cName','Nama Lengkap','trim|required');
 		$this->form_validation->set_rules('cEmail','Alamat Email','trim|required|valid_email');
 		$this->form_validation->set_rules('cGender','Jenis Kelamin','trim|required');
