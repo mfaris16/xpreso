@@ -17,6 +17,7 @@
 <link rel="stylesheet" href="<?= base_url('assets/css/vendor.css');  ?>">
 <link rel="stylesheet" href="<?= base_url('assets/css/main.css');  ?>">
 <link rel="stylesheet" href="<?= base_url('assets/css/style.css');?>">	
+
 <!-- script
     ================================================== -->
 <script src="<?= base_url('assets/js/modernizr.js');  ?>"></script>
@@ -132,10 +133,28 @@
 			<li>Uang pendaftaran tidak dapat dikembalikan apabila sekolah yang bersangkutan ingin mengundurkan diri. </li>
 		</ol>
 <h3>BIAYA PENDAFTARAN</h3>
-
-<a href="#registrasi"><h5>CLICK HERE FOR REGISTRATION</h5></a>
+<table>
+<tr></tr>
+	<td>No.</td>
+	<td>Nama Lomba</td>
+	<td>Biaya Pendaftaran (Rp.)</td>
+</tr>
+<?php 
+$no =1;
+foreach ($biaya as $b):
+?>
+<tr>
+	<td><?= $no++?></td>
+	<td><?= $b['nama_lomba']?></td>
+	<td><?= $b['biaya'] ?></td>
+</tr>
+<?php endforeach;?>
+</table>
+<button id="myBtn">CLICK HERE FOR REGISTRATION</button>
 <!-- Buat modal kita simpen disini ya-->
-
+<div id="myModal" class="modal">
+<div class="modal-content">
+<span class="close">&times;</span>
 	<h4>INFORMATION</h4>
 	<ol>
 		<li>Mohon untuk membaca ALUR DAN PERSYARATAN PENDAFTARAN dan KETENTUAN PENDAFTARAN agar tidak terjadi kesalah pahaman.</li>
@@ -221,6 +240,8 @@
     
                         </fieldset>
                     </form> <!-- end form -->
+</div>
+</div>
 <!-- /Modal -->
 	</div>
 	<!-- end s-content -->
@@ -235,6 +256,33 @@
 <script src="<?= base_url('assets/js/plugins.js');?>"></script>
 <script src="<?= base_url('assets/js/main.js');?>"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+} 
+</script>
 </body>
 
 

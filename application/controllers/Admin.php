@@ -37,7 +37,8 @@ class Admin extends CI_Controller{
             $this->session->set_userdata($data_session);
             redirect('admin');
         }else{
-            redirect('');
+			$this->session->set_flashdata('msg', 'Username atau Password Salah');
+			redirect('admin/login');
         }
     }else{
         $this->load->view('login-page');
@@ -50,6 +51,10 @@ class Admin extends CI_Controller{
     }
     public function tambah()
     {
+		if($this->session->userdata('akses')!=1){
+			redirect('admin/login');
+			die;
+		}
         $data['lomba']=[
 			'Futsal (SMP)',
 			'Futsal (SMA)',
@@ -97,6 +102,9 @@ class Admin extends CI_Controller{
     }
     public function edit($id)
     {
+		if($this->session->userdata('akses')!=1){
+			redirect('admin/login');
+			}
         $data['getId'] = $this->M_admin->getById($id);
         $data['lomba']=[
 			'Futsal (SMP)',
@@ -142,6 +150,9 @@ class Admin extends CI_Controller{
     }
     public function hapus($id)
     {
+		if($this->session->userdata('akses')!=1){
+						die;
+			}
         $this->M_admin->delete($id);
         redirect('admin','refresh');
         

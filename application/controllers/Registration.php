@@ -30,6 +30,7 @@ class Registration extends CI_Controller{
 		$data['laguL'] = [
 			'Photograph', 'Arti Sahabat', 'Gajah'	
 		];
+		$data['biaya'] = $this->M_reg->biaya(); 
 		$this->form_validation->set_rules('cName','Nama Lengkap','trim|required');
 		$this->form_validation->set_rules('cEmail','Alamat Email','trim|required|valid_email');
 		$this->form_validation->set_rules('cGender','Jenis Kelamin','trim|required');
