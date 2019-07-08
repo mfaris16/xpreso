@@ -8,28 +8,7 @@ class Registration extends CI_Controller{
 	}
 	public function index()
 	{
-		$data['lomba']=[
-			'Futsal (SMP)',
-			'Futsal (SMA)',
-			'Basket (SMP)',
-			'Basket (SMA)',
-			'Silat (SMA)',
-			'E-Sport (SMP)',
-			'E-Sport (SMA)',
-			'E-Sport (Umum)',
-			'Marawis (SMA)',
-			'Solo Vocal (SMP)',
-			'Solo Vocal (SMA)',
-			'MHQ (SMP)',
-			'Dakwah (SMP)',
-			'Dakwah (SMA)',
-			'English Debate (SMA)',
-			'Storytelling (SMP)',
-			'Cerdas Cermat Science and Religion (SMP)'
-		];
-		$data['laguL'] = [
-			'Photograph', 'Arti Sahabat', 'Gajah'	
-		];
+		$data['lomba']=$this->M_reg->lomba()->result_array();
 		$data['biaya'] = $this->M_reg->biaya(); 
 		$this->form_validation->set_rules('cName','Nama Lengkap','trim|required');
 		$this->form_validation->set_rules('cEmail','Alamat Email','trim|required|valid_email');
@@ -52,6 +31,12 @@ class Registration extends CI_Controller{
 		}
 
 
+	}
+	public function get_sublomba()
+	{
+		$id=$this->input->post('id');
+		$data=$this->M_reg->sub_lomba($id);
+		echo json_encode($data);
 	}
 }
 

@@ -25,7 +25,7 @@ class M_reg extends CI_Model {
             'tgl_lahir' => $tglLahir,
             'alamat' => $alamat,
             'nohp' => $noHp ,
-            'mata_lomba' => $lomba,
+            'mata_lomba_id' => $lomba,
             'lagu' => $lagu,
             'asal_sekolah' => $asal,
             'no_sekolah' => $noHpSekolah,
@@ -42,8 +42,13 @@ class M_reg extends CI_Model {
 	
 	public function lomba()
 	{
-		$this->db->query("'select * from lomba where lagu='solo_vokal'");
-	}
+		return $this->db->get('mata_lomba');
+    }
+    public function sub_lomba($id)
+    {
+        return $this->db->query("SELECT * FROM sub_lomba WHERE id_mata_lomba = '$id'")->result_array();
+
+    }
 
 }
 

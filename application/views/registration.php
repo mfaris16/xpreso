@@ -210,17 +210,14 @@
 							<div class="form-field">
 								<select name="cLomba" id="cLomba" class="full-width">
 									<?php foreach($lomba as $l) :?>
-									<option value="<?= $l?>"><?= $l?></option>
+									<option value="<?= $l['id']?>"><?= $l['nama_lomba']?></option>
 									<?php endforeach;?>
 								</select>
 							</div>
 
 							<div class="form-field">
-								<select name="cLagu" id="cLagu" class="full-width">
+								<select name="cLagu" id="cLagu" class="cLagu full-width">
 									<option value="-">--Pilih Lagu--</option>
-								<?php foreach($laguL as $lL) :?>
-									<option value="<?= $lL?>"><?= $lL?></option>
-									<?php endforeach;?>
 								</select>
 							</div>
 							<div class="form-field">
@@ -283,6 +280,29 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 } 
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#cLomba').change(function(){
+			var id=$(this).val();
+			$.ajax({
+				url : "<?= base_url();?>/registration/get_sublomba",
+				method : "POST",
+				data : {id: id},
+				async : false,
+		        dataType : 'json',
+				success: function(data){
+					var html = '';
+		            var i;
+		            for(i=0; i<data.length; i++){
+		                html += '<option>'+data[i].nama+'</option>';
+		            }
+		            $('.cLagu').html(html);
+					
+				}
+			});
+		});
+	});
 </script>
 </body>
 
