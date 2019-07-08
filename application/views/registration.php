@@ -282,6 +282,8 @@ window.onclick = function(event) {
 } 
 </script>
 <script type="text/javascript">
+
+	
 	$(document).ready(function(){
 		$('#cLomba').change(function(){
 			var id=$(this).val();
