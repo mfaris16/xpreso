@@ -38,7 +38,12 @@ class M_reg extends CI_Model {
     public function biaya()
     {
         return $this->db->get('biaya_lomba')->result_array();
-    }
+	}
+	
+	public function lomba()
+	{
+		$this->db->query("'select * from lomba where lagu='solo_vokal'");
+	}
 
 }
 

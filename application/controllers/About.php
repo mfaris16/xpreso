@@ -2,6 +2,7 @@
 class About extends CI_Controller{
 	public function index()
 	{
-		$this->load->view('page-about');
+		$data['title'] = 'XPRESO - About';
+		$this->load->view('page-about',$data);
 	}
 }

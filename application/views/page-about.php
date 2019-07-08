@@ -5,7 +5,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>About - Typerite</title>
+    <title><?= $title ?></title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -51,7 +51,7 @@
         <header class="s-header">
         <div class="header__top">
             <div class="header__logo">
-                <a class="site-logo" href="welcome"><h3 style="color: white">XPRESO</h3></a>
+                <a class="site-logo" href="welcome"><h5 style="color: white">XPRESO</h5></a>
             </div>
             <div class="header__search">
                 <form role="search" method="get" class="header__search-form" action="#">

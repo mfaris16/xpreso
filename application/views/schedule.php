@@ -3,21 +3,19 @@
 <head>
 <!--- basic page needs
     ================================================== -->
-	<meta charset="UTF-8">
+<meta charset="utf-8">
 <title>XPRESO</title>
 <meta name="description" content="">
 <meta name="author" content="">
 <!-- mobile specific metas
     ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- CSS
     ================================================== -->
-	<link rel="stylesheet" href="<?= base_url('assets/css/base.css');  ?>">
+<link rel="stylesheet" href="<?= base_url('assets/css/base.css');  ?>">
 <link rel="stylesheet" href="<?= base_url('assets/css/vendor.css');  ?>">
 <link rel="stylesheet" href="<?= base_url('assets/css/main.css');  ?>">
-<link rel="stylesheet" href="<?= base_url('assets/css/style.css');?>">	
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 <!-- script
     ================================================== -->
 <script src="<?= base_url('assets/js/modernizr.js');  ?>"></script>
@@ -41,7 +39,7 @@
 	<header class="s-header">
 	<div class="header__top">
 		<div class="header__logo">
-			<a class="site-logo" href="<?= base_url();?>"><h5 style="color: white">XPRESO</h5></a>
+			<a class="site-logo" href="index.html"><h5 style="color: white">XPRESO</h5></a>
 		</div>
 		<div class="header__search">
 			<form role="search" method="get" class="header__search-form" action="#">
@@ -61,7 +59,7 @@
 	<ul class="header__nav">
 		<li>
 			<a href="welcome" title="">Home</a>
-		</li>
+        </li>
         <li>
 			<a href="about" title="">About Us</a>
 		</li>
@@ -74,7 +72,7 @@
         <li>
             <a href="registration">Registration</a>
         </li>
-        <li>
+        <li class="current">
             <a href="schedule">Schedule</a>
         </li>
         <li>
@@ -99,34 +97,20 @@
 	</nav>
 	<!-- end header__nav-wrap --></header>
 	<!-- end s-header -->
-	<div class="s-content">
-
-<h3 class="h2">Login mangggg</h3>
+	<div class="s-content text-center">
         
-                    <form name="contactForm" id="contactForm" method="post" action="" autocomplete="off">
-                        <fieldset>
-    
-                            <div class="form-field">
-                                <input name="email" id="email" class="full-width" placeholder="Alamat Email" value="<?= set_value('email');?>" type="email">
-                            </div>
-                            <div class="form-field">
-                                <input name="password" id="password" class="full-width" placeholder="Password" value="" type="password">
-                            </div>
-    
-                            <input name="login" id="login" class="btn btn--primary btn-wide btn--large full-width" value="Login" type="submit">
-    
-    </fieldset>
-</form>
+	</div>
+	<!-- end s-content -->
 	<!-- footer
         ================================================== -->
-        </div>
-
+</div>
 <!-- end s-wrap -->
 <!-- Java Script
-    ================================================== -->
+    ================================================== -->\
 <script src="<?= base_url('assets/js/jquery-3.2.1.min.js');?>"></script>
 <script src="<?= base_url('assets/js/plugins.js');?>"></script>
 <script src="<?= base_url('assets/js/main.js');?>"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>	
 </body>
+
 </html>

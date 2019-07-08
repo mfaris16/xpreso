@@ -51,7 +51,7 @@
         <header class="s-header">
         <div class="header__top">
             <div class="header__logo">
-                <a class="site-logo" href="<?= base_url();?>"><h3 style="color: white">XPRESO</h3></a>
+                <a class="site-logo" href="<?= base_url();?>"><h5 style="color: white">XPRESO</h5></a>
             </div>
             <div class="header__search">
                 <form role="search" method="get" class="header__search-form" action="#">
@@ -113,8 +113,9 @@
 
         <!-- site content
         ================================================== -->
-        <div class="s-content content">
-            <h1>Garuda Tech</h1>
+        <div class="s-content text-center">
+            <h1>Sponsor & Media Partner</h1>
+			<img src="<?= base_url('assets/images/GTECH CONCEPT3_wa.jpg')?>" width="30%">
 
         </div> <!-- end s-content -->
 

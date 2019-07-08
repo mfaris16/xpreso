@@ -41,7 +41,7 @@
 	<header class="s-header">
 	<div class="header__top">
 		<div class="header__logo">
-			<a class="site-logo" href="<?= base_url();?>"><h3 style="color: white">XPRESO</h3></a>
+			<a class="site-logo" href="<?= base_url();?>"><h5 style="color: white">XPRESO</h5></a>
 		</div>
 		<div class="header__search">
 			<form role="search" method="get" class="header__search-form" action="#">
@@ -139,14 +139,14 @@
 	<td>Nama Lomba</td>
 	<td>Biaya Pendaftaran (Rp.)</td>
 </tr>
-<?php 
-$no =1;
-foreach ($biaya as $b):
-?>
+	<?php 
+	$no =1;
+	foreach ($biaya as $b):
+	?>
 <tr>
 	<td><?= $no++?></td>
 	<td><?= $b['nama_lomba']?></td>
-	<td><?= $b['biaya'] ?></td>
+	<td><?= $b['biaya'] .$b['row']. $b['sub_harga'] ?></td>
 </tr>
 <?php endforeach;?>
 </table>
@@ -154,6 +154,7 @@ foreach ($biaya as $b):
 <!-- Buat modal kita simpen disini ya-->
 <div id="myModal" class="modal">
 <div class="modal-content">
+<div class="s-content">
 <span class="close">&times;</span>
 	<h4>INFORMATION</h4>
 	<ol>
@@ -177,7 +178,6 @@ foreach ($biaya as $b):
 	</ol>
 
 	<h3 class="h2">Mohon Isi Data Dibawah Ini</h3>
-        
                     <form name="contactForm" id="contactForm" method="post" action="" autocomplete="off">
                         <fieldset>
     
@@ -240,6 +240,7 @@ foreach ($biaya as $b):
     
                         </fieldset>
                     </form> <!-- end form -->
+</div>
 </div>
 </div>
 <!-- /Modal -->

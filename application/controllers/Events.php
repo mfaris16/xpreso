@@ -2,6 +2,7 @@
 class Events extends CI_Controller{
 	public function index()
 	{
-		$this->load->view('events');
+		$data['title'] = 'XPRESO - Events';
+		$this->load->view('events',$data);
 	}
 }

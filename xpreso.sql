@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.6deb5
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Jul 05, 2019 at 05:11 PM
--- Server version: 5.7.26-0ubuntu0.19.04.1
--- PHP Version: 7.2.19-0ubuntu0.19.04.1
+-- Host: 127.0.0.1
+-- Generation Time: 08 Jul 2019 pada 15.14
+-- Versi Server: 10.1.28-MariaDB
+-- PHP Version: 7.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -23,7 +25,40 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `registration`
+-- Struktur dari tabel `biaya_lomba`
+--
+
+CREATE TABLE `biaya_lomba` (
+  `id` int(10) NOT NULL,
+  `nama_lomba` varchar(255) NOT NULL,
+  `biaya` varchar(255) DEFAULT NULL,
+  `row` varchar(10) NOT NULL,
+  `sub_harga` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `biaya_lomba`
+--
+
+INSERT INTO `biaya_lomba` (`id`, `nama_lomba`, `biaya`, `row`, `sub_harga`) VALUES
+(1, 'Futsal (SMP)', NULL, '', NULL),
+(2, 'Futsal (SMA)', NULL, '', NULL),
+(3, 'Basket (SMP)', '350.000,-/Tim', '', NULL),
+(4, 'Basket (SMA)', '450.000,-/Tim', '', NULL),
+(5, 'Silat (SMA)', '100.000,-/Orang', '<br><hr>', '150.000,-/Kontingen'),
+(7, 'E-Sport (SMP, SMA, Umum)', '100.000,-/Squad', '', NULL),
+(8, 'Marawis (SMA)', '200.000,-/Tim', '', NULL),
+(9, 'Solo Vocal (SMP, SMA)', '85.000,-/Orang', '', NULL),
+(10, 'MHQ (SMP)', '70.000,-/Orang', '', NULL),
+(11, 'Dakwah (SMP, SMA)', '75.000,-/Orang', '', NULL),
+(12, 'English Debate (SMA)', '100.000,-/Tim', '', NULL),
+(13, 'Storytelling (SMP)', NULL, '', NULL),
+(14, 'Cerdas Cermat Science and Religion (SMP)', '150.000,-/Tim', '', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `registration`
 --
 
 CREATE TABLE `registration` (
@@ -44,16 +79,17 @@ CREATE TABLE `registration` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `registration`
+-- Dumping data untuk tabel `registration`
 --
 
 INSERT INTO `registration` (`id`, `nama`, `email`, `jenis_kelamin`, `tgl_lahir`, `alamat`, `nohp`, `mata_lomba`, `lagu`, `asal_sekolah`, `no_sekolah`, `nama_pembina`, `no_pembina`, `tgl_dibuat`) VALUES
-(1, 'asda', 'admin@admin.com', 'L', '2019-07-30', 'aaa', 'aa', 'Futsal (SMP)', 'Photograph', 'aasdad', 'axadaa', 'dada', 'adad', '05-07-2019');
+(1, 'asda', 'admin@admin.com', 'L', '2019-07-30', 'aaa', 'aa', 'Futsal (SMP)', 'Photograph', 'aasdad', 'axadaa', 'dada', 'adad', '05-07-2019'),
+(2, 'asdas', 'dsad@gmail.com', 'L', '2019-07-09', 'asdasdsadasdasdsadas', '12321312321', 'English Debate (SMA)', 'Photograph', 'sadsad', '21321321', '1wdas', '123123123', '07-08-2019');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `role`
+-- Struktur dari tabel `role`
 --
 
 CREATE TABLE `role` (
@@ -62,7 +98,7 @@ CREATE TABLE `role` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `role`
+-- Dumping data untuk tabel `role`
 --
 
 INSERT INTO `role` (`id`, `role`) VALUES
@@ -72,7 +108,7 @@ INSERT INTO `role` (`id`, `role`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -84,7 +120,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `role_id`) VALUES
@@ -93,6 +129,12 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`, `role_id`) VALUES
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `biaya_lomba`
+--
+ALTER TABLE `biaya_lomba`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `registration`
@@ -117,20 +159,30 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `biaya_lomba`
+--
+ALTER TABLE `biaya_lomba`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
 -- AUTO_INCREMENT for table `registration`
 --
 ALTER TABLE `registration`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `role`
 --
 ALTER TABLE `role`
   MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

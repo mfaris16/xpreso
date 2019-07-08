@@ -20,6 +20,7 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		$data['title'] = 'XPRESO - Home';
 		$this->load->view('welcome_message');
 	}
 
