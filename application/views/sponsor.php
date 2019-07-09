@@ -5,7 +5,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>About - Typerite</title>
+    <title><?= $title ?></title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -114,19 +114,19 @@
         <!-- site content
         ================================================== -->
         <div class="s-content text-center">
-            <h1>Sponsor & Media Partner</h1>
-			<img src="<?= base_url('assets/images/GTECH CONCEPT3_wa.jpg')?>" width="30%">
-
+			<h1>Sponsor & Media Partner</h1>
+			<div class="sponsor">
+				<a href=""><img src="<?= base_url('assets/images/GTECH CONCEPT1.png')?>" width="30%"></a>
+			</div>
         </div> <!-- end s-content -->
 
     </div> <!-- end s-wrap -->
 
-
     <!-- Java Script
     ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="<?= base_url('assets/js/jquery-3.2.1.min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/plugins.js') ?>"></script>
+    <script src="<?= base_url('assets/js/main.js') ?>"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </body>

@@ -9,6 +9,7 @@ class Registration extends CI_Controller{
 	public function index()
 	{
 		$data['lomba']=$this->M_reg->lomba()->result_array();
+		$data['title'] = 'XPRESO - Registration';
 		$data['biaya'] = $this->M_reg->biaya(); 
 		$this->form_validation->set_rules('cName','Nama Lengkap','trim|required');
 		$this->form_validation->set_rules('cEmail','Alamat Email','trim|required|valid_email');

@@ -528,4 +528,14 @@ li.L9 {
   /* */
 }
 
-/*# sourceMappingURL=vendor.css.map */
+/* sponsor */
+
+.sponsor a img{
+	filter: grayscale(1);
+	margin-top: 5%;
+}
+
+.sponsor a img:hover{
+	filter: grayscale(0);
+	transition: 0.5s
+}

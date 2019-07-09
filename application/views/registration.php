@@ -4,7 +4,7 @@
 <!--- basic page needs
     ================================================== -->
 	<meta charset="UTF-8">
-<title>XPRESO</title>
+<title><?= $title ?></title>
 <meta name="description" content="">
 <meta name="author" content="">
 <!-- mobile specific metas
