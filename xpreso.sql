@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.6deb5
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Jul 08, 2019 at 09:58 PM
--- Server version: 5.7.26-0ubuntu0.19.04.1
--- PHP Version: 7.2.19-0ubuntu0.19.04.1
+-- Host: 127.0.0.1
+-- Generation Time: 09 Jul 2019 pada 09.06
+-- Versi Server: 10.1.28-MariaDB
+-- PHP Version: 7.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -23,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `biaya_lomba`
+-- Struktur dari tabel `biaya_lomba`
 --
 
 CREATE TABLE `biaya_lomba` (
@@ -35,7 +37,7 @@ CREATE TABLE `biaya_lomba` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `biaya_lomba`
+-- Dumping data untuk tabel `biaya_lomba`
 --
 
 INSERT INTO `biaya_lomba` (`id`, `nama_lomba`, `biaya`, `row`, `sub_harga`) VALUES
@@ -56,7 +58,7 @@ INSERT INTO `biaya_lomba` (`id`, `nama_lomba`, `biaya`, `row`, `sub_harga`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mata_lomba`
+-- Struktur dari tabel `mata_lomba`
 --
 
 CREATE TABLE `mata_lomba` (
@@ -65,7 +67,7 @@ CREATE TABLE `mata_lomba` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `mata_lomba`
+-- Dumping data untuk tabel `mata_lomba`
 --
 
 INSERT INTO `mata_lomba` (`id`, `nama_lomba`) VALUES
@@ -90,7 +92,7 @@ INSERT INTO `mata_lomba` (`id`, `nama_lomba`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `registration`
+-- Struktur dari tabel `registration`
 --
 
 CREATE TABLE `registration` (
@@ -102,7 +104,7 @@ CREATE TABLE `registration` (
   `alamat` text NOT NULL,
   `nohp` varchar(20) NOT NULL,
   `mata_lomba_id` int(1) NOT NULL,
-  `lagu` varchar(255) NOT NULL,
+  `lagu` varchar(255) DEFAULT NULL,
   `asal_sekolah` varchar(255) NOT NULL,
   `no_sekolah` varchar(20) NOT NULL,
   `nama_pembina` varchar(128) NOT NULL,
@@ -110,10 +112,17 @@ CREATE TABLE `registration` (
   `tgl_dibuat` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `registration`
+--
+
+INSERT INTO `registration` (`id`, `nama`, `email`, `jenis_kelamin`, `tgl_lahir`, `alamat`, `nohp`, `mata_lomba_id`, `lagu`, `asal_sekolah`, `no_sekolah`, `nama_pembina`, `no_pembina`, `tgl_dibuat`) VALUES
+(14, 'asd', 'wwqdq@gmail.com', 'P', '2019-07-18', 'asdasdasd', '012930123', 4, NULL, 'sadsad', '123123', 'asdad21', '32432423', '07-09-2019');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `role`
+-- Struktur dari tabel `role`
 --
 
 CREATE TABLE `role` (
@@ -122,7 +131,7 @@ CREATE TABLE `role` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `role`
+-- Dumping data untuk tabel `role`
 --
 
 INSERT INTO `role` (`id`, `role`) VALUES
@@ -132,7 +141,7 @@ INSERT INTO `role` (`id`, `role`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sub_lomba`
+-- Struktur dari tabel `sub_lomba`
 --
 
 CREATE TABLE `sub_lomba` (
@@ -142,21 +151,22 @@ CREATE TABLE `sub_lomba` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `sub_lomba`
+-- Dumping data untuk tabel `sub_lomba`
 --
 
 INSERT INTO `sub_lomba` (`id`, `nama`, `id_mata_lomba`) VALUES
 (1, 'Photograph', 10),
 (2, 'Arti Sahabat', 10),
 (3, 'Gajah', 10),
-(4, 'Photograph', 11),
-(5, 'Arti Sahabat', 11),
-(6, 'Gajah', 11);
+(4, 'Kejar Mimpi', 11),
+(5, 'Nyawa Dan Harapan', 11),
+(6, 'Hijrah Cinta', 11),
+(7, 'Fight Song', 11);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -168,7 +178,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `role_id`) VALUES
@@ -226,26 +236,32 @@ ALTER TABLE `users`
 --
 ALTER TABLE `mata_lomba`
   MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
 --
 -- AUTO_INCREMENT for table `registration`
 --
 ALTER TABLE `registration`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
 --
 -- AUTO_INCREMENT for table `role`
 --
 ALTER TABLE `role`
   MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `sub_lomba`
 --
 ALTER TABLE `sub_lomba`
-  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
