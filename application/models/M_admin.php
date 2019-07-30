@@ -8,6 +8,10 @@ class M_admin extends CI_Model {
     public function data()
     {
         return $this->db->get('registration')->result_array();
+	}
+	public function relasi()
+    {
+        return $this->db->query("SELECT * FROM `mata_lomba` ORDER BY `mata_lomba`.`nama_lomba` ASC")->result_array();
     }
     public function getById($id)
     {

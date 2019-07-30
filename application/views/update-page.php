@@ -59,27 +59,27 @@
 	<!-- end header__top -->
 	<nav class="header__nav-wrap">
 	<ul class="header__nav">
-		<li>
-			<a href="welcome" title="">Home</a>
-		</li>
-        <li>
-			<a href="about" title="">About Us</a>
-		</li>
-		<li>
-			<a href="events" title="">Events</a>
-		</li>
-		<li>
-			<a href="information" title="">Information</a>
-        </li>
-        <li class="current">
-            <a href="registration">Registration</a>
-        </li>
-        <li>
-            <a href="schedule">Schedule</a>
-        </li>
-        <li>
-            <a href="sponsor">Sponsor & Media Partner</a>
-        </li>
+	<li>
+		<a href="welcome" title=""><i class="fas fa-home"></i> Home</a>
+	</li>
+	<li>
+		<a href="about" title=""><i class="fas fa-users"></i> About Us</a>
+	</li>
+	<li>
+		<a href="events" title=""><i class="far fa-calendar-check"></i> Events</a>
+	</li>
+	<li>
+		<a href="information" title=""><i class="fas fa-info-circle"></i> Information</a>
+	</li>
+	<li class="current">
+        <a href="registration"><i class="fas fa-user-plus"></i> Registration</a>
+    </li>
+    <li>
+    	<a href="schedule"><i class="far fa-calendar-alt"></i> Schedule</a>
+    </li>
+    <li>
+        <a href="sponsor"><i class="fas fa-user-tie"></i> Sponsor & Media Partner</a>
+    </li>
 	</ul>
 	<!-- end header__nav -->
 	<ul class="header__social">

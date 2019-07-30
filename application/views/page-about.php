@@ -1,39 +1,4 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
-
-    <!--- basic page needs
-    ================================================== -->
-    <meta charset="utf-8">
-    <title><?= $title ?></title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- mobile specific metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="<?= base_url('assets/css/base.css');?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/vendor.css');?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/main.css')?>">
-    
-
-    <!-- script
-    ================================================== -->
-    <script src="js/modernizr.js"></script>
-
-    <!-- favicons
-    ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-
-</head>
-
-<body class="ss-bg-white">
+<body>
 
     <!-- preloader
     ================================================== -->
@@ -69,27 +34,27 @@
         <!-- end header__top -->
         <nav class="header__nav-wrap">
         <ul class="header__nav">
-            <li>
-                <a href="welcome" title="">Home</a>
-            </li>
-            <li class="current">
-                <a href="page-about" title="">About Us</a>
-            </li>
-            <li>
-                <a href="events" title="">Events</a>
-            </li>
-            <li>
-                <a href="information" title="">Information</a>
-            </li>
-            <li>
-                <a href="registration">Registration</a>
-            </li>
-            <li>
-                <a href="schedule">Schedule</a>
-            </li>
-            <li>
-                <a href="sponsor">Sponsor & Media Partner</a>
-            </li>
+			<li>
+				<a href="welcome" title=""><i class="fas fa-home"></i> Home</a>
+			</li>
+			<li class="current">
+				<a href="about" title=""><i class="fas fa-users"></i> About Us</a>
+			</li>
+			<li>
+				<a href="events" title=""><i class="far fa-calendar-check"></i> Events</a>
+			</li>
+			<li>
+				<a href="information" title=""><i class="fas fa-info-circle"></i> Information</a>
+			</li>
+			<li>
+				<a href="registration"><i class="fas fa-user-plus"></i> Registration</a>
+			</li>
+			<li>
+				<a href="schedule"><i class="far fa-calendar-alt"></i> Schedule</a>
+			</li>
+			<li>
+				<a href="sponsor"><i class="fas fa-user-tie"></i> Sponsor & Media Partner</a>
+			</li>
         </ul>
         <!-- end header__nav -->
         <ul class="header__social">

@@ -9,6 +9,7 @@ class Admin extends CI_Controller{
     }
     public function index()
     {
+		$data['title'] = 'Admin';
         $data['datas'] = $this->M_admin->data();
         if($this->session->userdata('masuk')==true){
             
@@ -127,7 +128,7 @@ class Admin extends CI_Controller{
 		];
 		$data['laguL'] = [
 			'Photograph', 'Arti Sahabat', 'Gajah'	
-        ];
+		];
 		$this->form_validation->set_rules('cName','Nama Lengkap','trim|required');
 		$this->form_validation->set_rules('cEmail','Alamat Email','trim|required|valid_email');
 		$this->form_validation->set_rules('cGender','Jenis Kelamin','trim|required');

@@ -67,26 +67,26 @@
 	<nav class="header__nav-wrap">
 	<ul class="header__nav">
 		<li>
-			<a href="welcome" title="">Home</a>
-        </li>
-        <li>
-			<a href="about" title="">About Us</a>
+			<a href="welcome" title=""><i class="fas fa-home"></i> Home</a>
 		</li>
 		<li>
-			<a href="events" title="">Events</a>
+			<a href="about" title=""><i class="fas fa-users"></i> About Us</a>
 		</li>
 		<li>
-			<a href="information" title="">Information</a>
-        </li>
-        <li>
-            <a href="registration">Registration</a>
-        </li>
-        <li>
-            <a href="schedule">Schedule</a>
-        </li>
-        <li>
-            <a href="sponsor">Sponsor & Media Partner</a>
-        </li>
+			<a href="events" title=""><i class="far fa-calendar-check"></i> Events</a>
+		</li>
+		<li>
+			<a href="information" title=""><i class="fas fa-info-circle"></i> Information</a>
+		</li>
+		<li>
+			<a href="registration"><i class="fas fa-user-plus"></i> Registration</a>
+		</li>
+		<li>
+			<a href="schedule"><i class="far fa-calendar-alt"></i> Schedule</a>
+		</li>
+		<li>
+			<a href="sponsor"><i class="fas fa-user-tie"></i> Sponsor & Media Partner</a>
+		</li>
 	</ul>
 	<!-- end header__nav -->
 	<ul class="header__social">
@@ -110,7 +110,7 @@
 	<?= 'hai '.$this->session->userdata('username');
 	echo '<br>'.anchor('admin/keluar','keluar');
 	?>
-	<table>
+	<table class="table-responsive">
 		<tr>
 			<td>No.</td>
 			<td>Nama Lengkap</td>
@@ -126,7 +126,6 @@
 			<td>Nama Pembina</td>
 			<td>No Pembina</td>
 			<td>Tanggal Daftar</td>
-			<td><?= anchor('admin/tambah', 'Tambah Data'); ?></td>
 		</tr>
 		<?php
 		$no = 1;
@@ -140,17 +139,13 @@
 			<td><?= $d['tgl_lahir'];?></td>
 			<td><?= $d['alamat'];?></td>
 			<td><?= $d['nohp'];?></td>
-			<td><?= $d['mata_lomba'];?></td>
+			<td><?= $d['mata_lomba_id'];?></td>
 			<td><?= $d['lagu'];?></td>
 			<td><?= $d['asal_sekolah'];?></td>
 			<td><?= $d['no_sekolah'];?></td>
 			<td><?= $d['nama_pembina'];?></td>
 			<td><?= $d['no_pembina'];?></td>
 			<td><?= $d['tgl_dibuat'];?></td>
-			<td>
-				<a href="<?= base_url('admin/hapus/'.$d['id'])?>">hapus</a>
-				<a href="<?= base_url('admin/edit/'.$d['id'])?>">edit</a>
-			</td>
 		</tr>
 			<?php endforeach;?>
 	</table>

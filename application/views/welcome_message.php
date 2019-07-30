@@ -1,28 +1,3 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
-<!--- basic page needs
-    ================================================== -->
-<meta charset="utf-8">
-<title><?= $title ?></title>
-<meta name="description" content="">
-<meta name="author" content="">
-<!-- mobile specific metas
-    ================================================== -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- CSS
-    ================================================== -->
-<link rel="stylesheet" href="<?= base_url('assets/css/base.css');  ?>">
-<link rel="stylesheet" href="<?= base_url('assets/css/vendor.css');  ?>">
-<link rel="stylesheet" href="<?= base_url('assets/css/main.css');  ?>">
-
-<!-- script
-    ================================================== -->
-<script src="<?= base_url('assets/js/modernizr.js');  ?>"></script>
-<script src="https://kit.fontawesome.com/78cf3c7533.js"></script>
-<!-- favicons
-    ================================================== -->
-</head>
 <body>
 <!-- preloader
     ================================================== -->
@@ -58,37 +33,31 @@
 	<nav class="header__nav-wrap">
 	<ul class="header__nav">
 		<li class="current">
-			<a href="welcome" title="">Home</a>
+			<a href="welcome" title=""><i class="fas fa-home"></i> Home</a>
         </li>
         <li>
-			<a href="about" title="">About Us</a>
+			<a href="about" title=""><i class="fas fa-users"></i> About Us</a>
 		</li>
 		<li>
-			<a href="events" title="">Events</a>
+			<a href="events" title=""><i class="far fa-calendar-check"></i> Events</a>
 		</li>
 		<li>
-			<a href="information" title="">Information</a>
+			<a href="information" title=""><i class="fas fa-info-circle"></i> Information</a>
         </li>
         <li>
-            <a href="registration">Registration</a>
+            <a href="registration"><i class="fas fa-user-plus"></i> Registration</a>
         </li>
         <li>
-            <a href="schedule">Schedule</a>
+            <a href="schedule"><i class="far fa-calendar-alt"></i> Schedule</a>
         </li>
         <li>
-            <a href="sponsor">Sponsor & Media Partner</a>
+            <a href="sponsor"><i class="fas fa-user-tie"></i> Sponsor & Media Partner</a>
         </li>
 	</ul>
 	<!-- end header__nav -->
 	<ul class="header__social">
 		<li class="ss-instagram">
 			<a href="https://instagram.com/official.xpreso/"><span class="screen-reader-text">Instagram</span></a>
-		</li>
-		<li class="ss-whatsapp">
-			<a href="#0"><span class="screen-reader-text">WhatsApp</span></a>
-		</li>
-		<li class="ss-whatsapp">
-			<a href="#0"><span class="screen-reader-text">WhatsApp</span></a>
 		</li>
 		<li class="ss-whatsapp">
 			<a href="#0"><span class="screen-reader-text">WhatsApp</span></a>
@@ -115,9 +84,7 @@
     (function () {
         var options = {
             whatsapp: "085217155609", // WhatsApp number
-			whatsapp: "085217155609", // WhatsApp number
-			whatsapp: "085217155609", // WhatsApp number
-            call_to_action: "Message us", // Call to action
+            call_to_action: "Pesan", // Call to action
             position: "right", // Position may be 'right' or 'left'
         };
         var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;

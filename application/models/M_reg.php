@@ -47,13 +47,7 @@ class M_reg extends CI_Model {
     public function sub_lomba($id)
     {
         return $this->db->query("SELECT * FROM sub_lomba WHERE id_mata_lomba = '$id'")->result_array();
-
 	}
-	public function tes()
-	{
-		return $this->db->query("select * from users");
-	}
-
 }
 
 /* End of file M_reg.php */

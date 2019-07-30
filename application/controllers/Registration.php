@@ -33,6 +33,12 @@ class Registration extends CI_Controller{
 
 
 	}
+	public function get_mata_lomba()
+	{
+		$id = $this->input->post('id');
+		$data=$this->M_reg->relasi($id);
+		echo json_encode($data);
+	}
 	public function get_sublomba()
 	{
 		$id=$this->input->post('id');
