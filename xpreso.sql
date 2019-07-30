@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 09 Jul 2019 pada 09.06
+-- Generation Time: 30 Jul 2019 pada 11.39
 -- Versi Server: 10.1.28-MariaDB
 -- PHP Version: 7.1.10
 
@@ -63,31 +63,34 @@ INSERT INTO `biaya_lomba` (`id`, `nama_lomba`, `biaya`, `row`, `sub_harga`) VALU
 
 CREATE TABLE `mata_lomba` (
   `id` int(1) NOT NULL,
-  `nama_lomba` varchar(255) NOT NULL
+  `nama_lomba` varchar(255) NOT NULL,
+  `mata_lomba_id` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `mata_lomba`
 --
 
-INSERT INTO `mata_lomba` (`id`, `nama_lomba`) VALUES
-(1, 'Futsal (SMP)'),
-(2, 'Futsal (SMA)'),
-(3, 'Basket (SMP)'),
-(4, 'Basket (SMA)'),
-(5, 'Silat (SMA)'),
-(6, 'E-Sport (SMP)'),
-(7, 'E-Sport (SMA)'),
-(8, 'E-Sport (Umum)'),
-(9, 'Marawis (SMA)'),
-(10, 'Solo Vocal (SMP)'),
-(11, 'Solo Vocal (SMA)'),
-(12, 'MHQ (SMP)'),
-(13, 'Dakwah (SMP)'),
-(14, 'Dakwah (SMA)'),
-(15, 'English Debate (SMA)'),
-(16, 'Storytelling (SMP)'),
-(17, 'Cerdas Cermat Science and Religion (SMP)');
+INSERT INTO `mata_lomba` (`id`, `nama_lomba`, `mata_lomba_id`) VALUES
+(1, 'Futsal (SMP)', 1),
+(2, 'Futsal (SMA)', 2),
+(3, 'Basket (SMP)', 3),
+(4, 'Basket (SMA)', 4),
+(5, 'Silat (SMA)', 5),
+(6, 'E-Sport (SMP)', 6),
+(7, 'E-Sport (SMA)', 7),
+(8, 'E-Sport (Umum)', 8),
+(9, 'Marawis (SMA)', 9),
+(10, 'Solo Vocal (SMP) Untuk Putra', 10),
+(11, 'Solo Vocal (SMP) Untuk Putri', 11),
+(12, 'MHQ (SMP)', 12),
+(13, 'Dakwah (SMP)', 13),
+(14, 'Dakwah (SMA)', 14),
+(15, 'English Debate (SMA)', 15),
+(16, 'Storytelling (SMP)', 16),
+(17, 'Cerdas Cermat Science and Religion (SMP)', 17),
+(18, 'Solo Vocal (SMA) Untuk Putra', 18),
+(19, 'Solo Vocal (SMA) Untuk Putri', 19);
 
 -- --------------------------------------------------------
 
@@ -147,7 +150,7 @@ INSERT INTO `role` (`id`, `role`) VALUES
 CREATE TABLE `sub_lomba` (
   `id` int(1) NOT NULL,
   `nama` varchar(255) NOT NULL,
-  `id_mata_lomba` int(11) NOT NULL
+  `id_mata_lomba` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -155,13 +158,20 @@ CREATE TABLE `sub_lomba` (
 --
 
 INSERT INTO `sub_lomba` (`id`, `nama`, `id_mata_lomba`) VALUES
-(1, 'Photograph', 10),
-(2, 'Arti Sahabat', 10),
-(3, 'Gajah', 10),
-(4, 'Kejar Mimpi', 11),
-(5, 'Nyawa Dan Harapan', 11),
-(6, 'Hijrah Cinta', 11),
-(7, 'Fight Song', 11);
+(1, 'Photograph', '10'),
+(2, 'Arti Sahabat', '10'),
+(3, 'Gajah', '10'),
+(4, 'Kejar Mimpi', '11'),
+(5, 'Nyawa Dan Harapan', '11'),
+(6, 'Hijrah Cinta', '11'),
+(7, 'Fight Song', '11'),
+(8, 'Photograph', '18'),
+(9, 'Arti Sahabat', '18'),
+(10, 'Gajah', '18'),
+(11, 'Kejar Mimpi', '19'),
+(12, 'Nyawa Dan Harapan', '19'),
+(13, 'Hijrah Cinta', '19'),
+(14, 'Fight Song', '19');
 
 -- --------------------------------------------------------
 
@@ -182,10 +192,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `role_id`) VALUES
-(1, 'admin', 'admin@admin.com', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1),
-(2, 'asdas', 'asdad', 'asadsdad', 2),
-(3, 'a', 'as', 'asas', 1),
-(4, 'a', 'as', 'asas', 1);
+(1, 'admin', 'admin@admin.com', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1);
 
 --
 -- Indexes for dumped tables
@@ -201,13 +208,16 @@ ALTER TABLE `biaya_lomba`
 -- Indexes for table `mata_lomba`
 --
 ALTER TABLE `mata_lomba`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `nama_lomba` (`nama_lomba`),
+  ADD KEY `mata_lomba_id` (`mata_lomba_id`);
 
 --
 -- Indexes for table `registration`
 --
 ALTER TABLE `registration`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `mata_lomba_id` (`mata_lomba_id`);
 
 --
 -- Indexes for table `role`
@@ -235,7 +245,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `mata_lomba`
 --
 ALTER TABLE `mata_lomba`
-  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `registration`
@@ -253,7 +263,7 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT for table `sub_lomba`
 --
 ALTER TABLE `sub_lomba`
-  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `users`
